@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>scopeName</key>
+    <string>js-button-card-block.homeassistant.injection</string>
+    <key>injectionSelector</key>
+    <string>L:string.unquoted.block.homeassistant</string>
+    <key>name</key>
+    <string>Grammar for Button-Card Javascript blocks expressions surrounded by triple square brackets</string>
+    <key>patterns</key>
+    <array>
+      <dict>
+        <key>include</key>
+        <string>#js-button-card-block-expression</string>
+      </dict>
+    </array>
+    <key>repository</key>
+    <dict>
+      <key>js-button-card-block-expression</key>
+      <dict>
+        <key>comment</key>
+        <string>The 'name' is used to undo highlighting as string</string>
+        <key>name</key>
+        <string>keyword.operator.homeassistant</string>
+        <key>begin</key>
+        <string>\[\[\[</string>
+        <key>end</key>
+        <string>\]\]\]</string>
+        <key>beginCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>constant.character.escape.homeassistant</string>
+          </dict>
+        </dict>
+        <key>endCaptures</key>
+        <dict>
+          <key>0</key>
+          <dict>
+            <key>name</key>
+            <string>constant.character.escape.homeassistant</string>
+          </dict>
+        </dict>
+        <key>contentName</key>
+        <string>meta.embedded.block.js</string>
+        <key>patterns</key>
+        <array>
+          <dict>
+            <key>include</key>
+            <string>source.js#expression</string>
+          </dict>
+        </array>
+      </dict>
+    </dict>
+  </dict>
+</plist>

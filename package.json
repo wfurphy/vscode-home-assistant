@@ -197,6 +197,26 @@
         "injectTo": [
           "source.home-assistant"
         ]
+      },
+      {
+        "scopeName": "js-button-card-inline.homeassistant.injection",
+        "path": "./syntaxes/js-button-card-inline.tmLanguage",
+        "injectTo": [
+          "source.home-assistant"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.inline.js": "js"
+        }
+      },
+      {
+        "scopeName": "js-button-card-block.homeassistant.injection",
+        "path": "./syntaxes/js-button-card-block.tmLanguage",
+        "injectTo": [
+          "source.home-assistant"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.block.js": "js"
+        }
       }
     ],
     "commands": [
